@@ -18,8 +18,9 @@ import style from "./style.module.scss";
 // Utils
 import getColor from "./utils/getColor";
 import stringToHash from "../../../utils/functions/hash";
+import bookService from "../../../models/books";
 
-const ViewCard = (props: Props) => {
+const ReadCard = (props: Props) => {
 
 	// -------------------------------------------------
 	// Properties
@@ -31,6 +32,10 @@ const ViewCard = (props: Props) => {
 	// -------------------------------------------------
 	// Memos
 	// -------------------------------------------------
+
+	const data = React.useMemo(() => {
+		return bookService.getReadInformation(props.book.id, props.userId);
+	}, [props.book, props.userId]);
 
 	const colors = React.useMemo(() => {
 		return getColor(props.book.id);
@@ -54,14 +59,6 @@ const ViewCard = (props: Props) => {
 
 	return (
 		<Link to={`books/${props.book.id}`} className={style.container} style={{backgroundColor: colors[0]}}>
-			<div className="col-8">
-				<h1 style={{color: colors[1]}}>{props.book.volumeInfo.title}</h1>
-				<h2 style={{color: colors[1]}}>{props.book.volumeInfo.authors[0]}</h2>
-
-				<h3 style={{color: colors[1]}}>
-					<i className="fa fa-chart-bar"  style={{color: colors[1]}} /> {props.book.volumeInfo.pageCount}+ {_("READ")}
-				</h3>
-			</div>
 			{
 				(props.book.volumeInfo.imageLinks?.thumbnail || props.book.volumeInfo.imageLinks?.smallThumbnail) &&
 
@@ -69,6 +66,14 @@ const ViewCard = (props: Props) => {
 					<img className={style.cover} src={props.book.volumeInfo.imageLinks?.thumbnail || props.book.volumeInfo.imageLinks?.smallThumbnail} />
 				</div>
 			}
+			<div className="col-8 ps-2">
+				<h1 style={{color: colors[1]}}>{props.book.volumeInfo.title}</h1>
+				<h2 style={{color: colors[1]}}>{props.book.volumeInfo.authors[0]}</h2>
+
+				<h3 style={{color: colors[1]}} className={style.read}>
+					<i style={{color: colors[1]}} className="fa fa-book" /> {_("CHAPTER")} {data.currentChapter} {_("FROM")} {data.totalChapters}
+				</h3>
+			</div>
 
 			<img className={style.decoration} src={wavyImage} style={position[0]} />
 			<img className={style.decoration} src={triangleImage} style={position[1]} />
@@ -78,4 +83,4 @@ const ViewCard = (props: Props) => {
 	);
 }
 
-export default ViewCard;
+export default ReadCard;

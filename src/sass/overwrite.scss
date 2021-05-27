@@ -2,6 +2,10 @@
 	background-color: #fefbf7;
 
 	min-height: 100vh;
+
+	> div > div {
+		padding-right: 17px;
+	}
 }
 
 .link {

@@ -3,5 +3,7 @@
 	"LIBRARIES": "Libraries",
 	"PROFILE": "Profile",
 	"SEARCH": "Search book",
-	"READ": "Read now"
+	"READ": "Read now",
+	"CHAPTER": "Chapter",
+	"FROM": "From"
 }

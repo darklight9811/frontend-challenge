@@ -16,10 +16,9 @@ import Props from "./props";
 import style from "./style.module.scss";
 
 // Utils
-import getColor from "./utils/getColor";
 import stringToHash from "../../../utils/functions/hash";
 
-const ViewCard = (props: Props) => {
+const ImgCard = (props: Props) => {
 
 	// -------------------------------------------------
 	// Properties
@@ -32,17 +31,15 @@ const ViewCard = (props: Props) => {
 	// Memos
 	// -------------------------------------------------
 
-	const colors = React.useMemo(() => {
-		return getColor(props.book.id);
-	}, [props.book.id]);
-
 	const position = React.useMemo(() => {
 		return [0, 1, 2, 3].map(() => {
-			const hash = stringToHash(props.book.id);
+			const hash = stringToHash(props.to);
+			const randomx = (((Math.random() * 10000000000) / hash) * 10).toString().substr(0, 2);
+			const randomy = (((Math.random() * 10000000000) / hash) * 10).toString().substr(0, 2);
 	
 			return {
-				top: `${((Math.random() * 10000000000) / hash) * 6}%`,
-				left: `${((Math.random() * 10000000000) / hash) * 6}%`,
+				top: `${randomx}%`,
+				left: `${randomy}%`,
 				transform: `rotate(${Math.random() * 360}deg)`
 			}
 		});
@@ -53,23 +50,7 @@ const ViewCard = (props: Props) => {
 	// -------------------------------------------------
 
 	return (
-		<Link to={`books/${props.book.id}`} className={style.container} style={{backgroundColor: colors[0]}}>
-			<div className="col-8">
-				<h1 style={{color: colors[1]}}>{props.book.volumeInfo.title}</h1>
-				<h2 style={{color: colors[1]}}>{props.book.volumeInfo.authors[0]}</h2>
-
-				<h3 style={{color: colors[1]}}>
-					<i className="fa fa-chart-bar"  style={{color: colors[1]}} /> {props.book.volumeInfo.pageCount}+ {_("READ")}
-				</h3>
-			</div>
-			{
-				(props.book.volumeInfo.imageLinks?.thumbnail || props.book.volumeInfo.imageLinks?.smallThumbnail) &&
-
-				<div className="col-4">
-					<img className={style.cover} src={props.book.volumeInfo.imageLinks?.thumbnail || props.book.volumeInfo.imageLinks?.smallThumbnail} />
-				</div>
-			}
-
+		<Link to={props.to} className={style.container} style={{backgroundImage: `url(${props.img})`}}>
 			<img className={style.decoration} src={wavyImage} style={position[0]} />
 			<img className={style.decoration} src={triangleImage} style={position[1]} />
 			<img className={style.decoration} src={rectangleImage} style={position[2]} />
@@ -78,4 +59,4 @@ const ViewCard = (props: Props) => {
 	);
 }
 
-export default ViewCard;
+export default ImgCard;

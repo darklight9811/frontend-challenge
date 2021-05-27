@@ -1,3 +1,6 @@
+// Packages
+import * as faker from "faker";
+
 // Store
 import { store, ModelsInterface } from "..";
 
@@ -6,6 +9,7 @@ import Service from "../../utils/service";
 
 // Services
 import recommended from "../../services/books/recommended.json";
+import recommendedPosts from "../../services/posts/recommended.json";
 
 // Interfaces
 import BookInterface from "./interface";
@@ -29,12 +33,13 @@ class BookServiceClass extends Service <ModelsInterface, "resource.books"> {
 
 	public index = async (query = "subject", page: number = 1, perpage = 10) => {
 		const [,dispatch] = this.model;
+		const [store] = this.store;
 
 		// update data
 		this.page = page;
 		this.query = query;
 
-		const response = await this.client.get(`${this.resourceUrl}`, { params: {page: this.page, perpage, q: this.query} });
+		const response = await this.client.get(`${this.resourceUrl}`, { params: {projection: "lite", langRestrict: store.auth.language, page: this.page, maxResults: perpage, q: this.query} });
 		
 		dispatch.setList(response.data.items);
 		dispatch.setItems(response.data.items);
@@ -46,12 +51,26 @@ class BookServiceClass extends Service <ModelsInterface, "resource.books"> {
 		this.index(this.query, this.page ++);
 	}
 
-	/**
-	 * TODO Implement a recommended back-end
-	 * @returns {BookInterface}
-	 */
+	// TODO Implement a recommended back-end
 	public getRecommended () {
 		return recommended as BookInterface[];
+	}
+
+	// TODO Implement posts back-end
+	public getPosts () {
+		return recommendedPosts;
+	}
+
+	public getReadInformation (bookId: string, userId: string) {
+		const totalChapters = faker.datatype.number(20) + 5;
+
+		return {
+			id: faker.datatype.uuid(),
+			bookId,
+			userId,
+			totalChapters: totalChapters,
+			currentChapter: faker.datatype.number(totalChapters) + 4,
+		}
 	}
 }
 
