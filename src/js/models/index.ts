@@ -3,14 +3,14 @@ import { init, RematchDispatch, RematchRootState } from "@rematch/core";
 
 // Models
 import BooksModel from "./books/model";
-import AuthModel from "./auth/model";
+import ConfigModel from "./config/model";
 
 // -------------------------------------------------
 // Models
 // -------------------------------------------------
 
 const models = {
-	"auth": AuthModel,
+	"config": ConfigModel,
 	"resource.books": BooksModel,
 };
 
