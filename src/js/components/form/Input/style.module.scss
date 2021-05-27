@@ -1,0 +1,30 @@
+.container {
+	position: relative;
+}
+
+.input {
+	width: 100%;
+
+	background-color: #FDFCFC;
+
+	border: transparent 0;
+	box-shadow: 5px 5px 80px rgba(212, 173, 134, 0.122623);
+	border-radius: 10px;
+
+	position: relative;
+	padding: 15px 15px 15px 40px;
+}
+
+.icon {
+	position: absolute;
+
+	transform: translate(0, -50%);
+
+	top: 50%;
+	left: 16px;
+	z-index: 10;
+
+	* {
+		color: #dcd8d8 ;
+	}
+}

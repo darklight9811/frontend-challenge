@@ -1,0 +1,57 @@
+.container {
+	border-radius: 5px;
+
+	padding: 15px 20px;
+	margin-right: 10px;
+
+	width: 272px;
+	height: 140px;
+	
+	overflow: hidden;
+	position: relative;
+	display: flex;
+	
+	text-decoration: none !important;
+
+	*:not(img) {
+		z-index: 1;
+	}
+
+	img:not(.cover) {
+		opacity: 0.5;
+	}
+
+	h1 {
+		font-size: 27px;
+	}
+
+	h2 {
+		font-size: 14px;
+		font-weight: lighter;
+		font-style: italic;
+	}
+
+	h3 {
+		font-size: 10px;
+		font-weight: lighter;
+
+		position: absolute;
+		bottom: 0;
+	}
+
+	:global {
+		.col-8 {
+			position: relative;
+		}
+	}
+}
+
+.cover {
+	width: 72px;
+
+	border-radius: 5px;
+}
+
+.decoration {
+	position: absolute;
+}
