@@ -1,0 +1,202 @@
+[
+	{
+		"kind": "books#volume",
+		"id": "R42aBAAAQBAJ",
+		"etag": "tGUE1wYNvSk",
+		"selfLink": "https://www.googleapis.com/books/v1/volumes/R42aBAAAQBAJ",
+		"volumeInfo": {
+			"title": "Hooked",
+			"subtitle": "How to Build Habit-Forming Products",
+			"authors": [
+				"Nir Eyal"
+			],
+			"publisher": "Penguin UK",
+			"publishedDate": "2014-11-04",
+			"description": "Nir Eyal reveals how successful companies create products people can't put down - and shows how you can do it too. INTERNATIONAL BESTSELLER WITH OVER 200,000 COPIES SOLD WORLDWIDE Based on years of research, consulting, and practical experience, Hooked: * Shows how to create user habits that stick * Includes practical insights and riveting examples, from the iPhone to Twitter, Pinterest and the Bible App * Explains how products influence our behaviour 'A must-read for everyone who cares about driving customer engagement' Eric Ries, author of The Lean Startup 'The most high bandwidth, high octane, and valuable presentation I have ever seen on this subject' Rory Sutherland, vice chairman, Ogilvy & Mather",
+			"industryIdentifiers": [
+				{
+					"type": "ISBN_13",
+					"identifier": "9780241971857"
+				},
+				{
+					"type": "ISBN_10",
+					"identifier": "0241971853"
+				}
+			],
+			"readingModes": {
+				"text": true,
+				"image": false
+			},
+			"pageCount": 256,
+			"printType": "BOOK",
+			"categories": [
+				"Business & Economics"
+			],
+			"averageRating": 4.5,
+			"ratingsCount": 5,
+			"maturityRating": "NOT_MATURE",
+			"allowAnonLogging": true,
+			"contentVersion": "1.13.14.0.preview.2",
+			"panelizationSummary": {
+				"containsEpubBubbles": false,
+				"containsImageBubbles": false
+			},
+			"imageLinks": {
+				"smallThumbnail": "http://books.google.com/books/content?id=R42aBAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+				"thumbnail": "http://books.google.com/books/content?id=R42aBAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+			},
+			"language": "un",
+			"previewLink": "http://books.google.com.br/books?id=R42aBAAAQBAJ&printsec=frontcover&dq=hooked&hl=&cd=1&source=gbs_api",
+			"infoLink": "https://play.google.com/store/books/details?id=R42aBAAAQBAJ&source=gbs_api",
+			"canonicalVolumeLink": "https://play.google.com/store/books/details?id=R42aBAAAQBAJ"
+		},
+		"saleInfo": {
+			"country": "BR",
+			"saleability": "FOR_SALE",
+			"isEbook": true,
+			"listPrice": {
+				"amount": 100.22,
+				"currencyCode": "BRL"
+			},
+			"retailPrice": {
+				"amount": 100.22,
+				"currencyCode": "BRL"
+			},
+			"buyLink": "https://play.google.com/store/books/details?id=R42aBAAAQBAJ&rdid=book-R42aBAAAQBAJ&rdot=1&source=gbs_api",
+			"offers": [
+				{
+					"finskyOfferType": 1,
+					"listPrice": {
+						"amountInMicros": 100220000,
+						"currencyCode": "BRL"
+					},
+					"retailPrice": {
+						"amountInMicros": 100220000,
+						"currencyCode": "BRL"
+					},
+					"giftable": true
+				}
+			]
+		},
+		"accessInfo": {
+			"country": "BR",
+			"viewability": "PARTIAL",
+			"embeddable": true,
+			"publicDomain": false,
+			"textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+			"epub": {
+				"isAvailable": true,
+				"acsTokenLink": "http://books.google.com.br/books/download/Hooked-sample-epub.acsm?id=R42aBAAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+			},
+			"pdf": {
+				"isAvailable": false
+			},
+			"webReaderLink": "http://play.google.com/books/reader?id=R42aBAAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+			"accessViewStatus": "SAMPLE",
+			"quoteSharingAllowed": false
+		},
+		"searchInfo": {
+			"textSnippet": "Nir Eyal reveals how successful companies create products people can&#39;t put down - and shows how you can do it too."
+		}
+	},
+	{
+		"kind": "books#volume",
+		"id": "TDkfEAAAQBAJ",
+		"etag": "hxi8TMilfRI",
+		"selfLink": "https://www.googleapis.com/books/v1/volumes/TDkfEAAAQBAJ",
+		"volumeInfo": {
+			"title": "A Única Coisa",
+			"subtitle": "A verdade surpreendentemente simples por trás de resultados extraordinários",
+			"authors": [
+				"Gary Keller",
+				"Jay Papasan"
+			],
+			"publisher": "Sextante",
+			"publishedDate": "2021-03-04",
+			"description": "2 milhões de exemplares vendidos. Primeiro lugar na lista de mais vendidos do The New York Times, Wall Street Journal e USA Today. Eleito um dos 100 melhores livros de negócios de todos os tempos (Goodreads). Não importa o objetivo, não importa o destino, a jornada para qualquer coisa que você queira começa sempre com um único passo. Esse passo se chama a Única Coisa. VOCÊ QUER MENOS Menos distrações, menos estresse e menos correria. Quer saber lidar com a enxurrada diária de e-mails, notícias e reuniões que suga sua energia e prejudica seu desempenho, gerando frustração e sobrecarga. E VOCÊ QUER MAIS Mais produtividade. Mais qualidade no que faz. Mais tempo para dedicar a si mesmo e ao que realmente importa para você. VOCÊ PODE TER OS DOIS ― MENOS E MAIS Como? Focando na sua Única Coisa. Neste livro, você vai aprender a: • Reduzir o foco para se concentrar no que é mais importante • Criar listas de sucesso, em vez de listas de tarefas • Eliminar atividades desnecessárias • Empregar sua energia de forma mais eficaz • Encontrar seu propósito e estabelecer prioridades • Se concentrar em sua Única Coisa para colher resultados extraordinários QUAL É A SUA ÚNICA COISA?",
+			"industryIdentifiers": [
+				{
+					"type": "ISBN_13",
+					"identifier": "9786555641240"
+				},
+				{
+					"type": "ISBN_10",
+					"identifier": "655564124X"
+				}
+			],
+			"readingModes": {
+				"text": true,
+				"image": true
+			},
+			"pageCount": 240,
+			"printType": "BOOK",
+			"categories": [
+				"Business & Economics"
+			],
+			"maturityRating": "NOT_MATURE",
+			"allowAnonLogging": true,
+			"contentVersion": "1.2.2.0.preview.3",
+			"panelizationSummary": {
+				"containsEpubBubbles": false,
+				"containsImageBubbles": false
+			},
+			"imageLinks": {
+				"smallThumbnail": "http://books.google.com/books/content?id=TDkfEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+				"thumbnail": "http://books.google.com/books/content?id=TDkfEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+			},
+			"language": "pt",
+			"previewLink": "http://books.google.com.br/books?id=TDkfEAAAQBAJ&printsec=frontcover&dq=the+one+thing&hl=&cd=2&source=gbs_api",
+			"infoLink": "https://play.google.com/store/books/details?id=TDkfEAAAQBAJ&source=gbs_api",
+			"canonicalVolumeLink": "https://play.google.com/store/books/details?id=TDkfEAAAQBAJ"
+		},
+		"saleInfo": {
+			"country": "BR",
+			"saleability": "FOR_SALE",
+			"isEbook": true,
+			"listPrice": {
+				"amount": 24.99,
+				"currencyCode": "BRL"
+			},
+			"retailPrice": {
+				"amount": 23.74,
+				"currencyCode": "BRL"
+			},
+			"buyLink": "https://play.google.com/store/books/details?id=TDkfEAAAQBAJ&rdid=book-TDkfEAAAQBAJ&rdot=1&source=gbs_api",
+			"offers": [
+				{
+					"finskyOfferType": 1,
+					"listPrice": {
+						"amountInMicros": 24990000,
+						"currencyCode": "BRL"
+					},
+					"retailPrice": {
+						"amountInMicros": 23740000,
+						"currencyCode": "BRL"
+					},
+					"giftable": true
+				}
+			]
+		},
+		"accessInfo": {
+			"country": "BR",
+			"viewability": "PARTIAL",
+			"embeddable": true,
+			"publicDomain": false,
+			"textToSpeechPermission": "ALLOWED",
+			"epub": {
+				"isAvailable": true,
+				"acsTokenLink": "http://books.google.com.br/books/download/A_%C3%9Anica_Coisa-sample-epub.acsm?id=TDkfEAAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+			},
+			"pdf": {
+				"isAvailable": true,
+				"acsTokenLink": "http://books.google.com.br/books/download/A_%C3%9Anica_Coisa-sample-pdf.acsm?id=TDkfEAAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+			},
+			"webReaderLink": "http://play.google.com/books/reader?id=TDkfEAAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+			"accessViewStatus": "SAMPLE",
+			"quoteSharingAllowed": false
+		},
+		"searchInfo": {
+			"textSnippet": "Não importa o objetivo, não importa o destino, a jornada para qualquer coisa que você queira começa sempre com um único passo. Esse passo se chama a Única Coisa. VOCÊ QUER MENOS Menos distrações, menos estresse e menos correria."
+		}
+	}
+]

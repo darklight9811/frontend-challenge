@@ -1,0 +1,7 @@
+{
+	"name": "container",
+	"targetPath": "src/js/containers",
+	"renameToNameFiles": [
+		"container"
+	]
+}

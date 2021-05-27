@@ -1,0 +1,7 @@
+{
+	"name": "component",
+	"targetPath": "src/js/components",
+	"renameToNameFiles": [
+		"component"
+	]
+}

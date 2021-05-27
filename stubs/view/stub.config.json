@@ -1,0 +1,7 @@
+{
+	"name": "view",
+	"targetPath": "src/js/views",
+	"renameToNameFiles": [
+		"view"
+	]
+}

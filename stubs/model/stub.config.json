@@ -1,0 +1,7 @@
+{
+	"name": "model",
+	"targetPath": "src/js/models",
+	"renameToNameFiles": [
+		"component"
+	]
+}
