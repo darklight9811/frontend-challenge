@@ -22,7 +22,26 @@
 
 	top: 50%;
 	left: 16px;
-	z-index: 10;
+	z-index: 106;
+
+	* {
+		color: #dcd8d8 ;
+	}
+}
+
+.close {
+	position: absolute;
+
+	transform: translate(0, -50%);
+
+	top: 50%;
+	right: 16px;
+	z-index: 106;
+
+	button {
+		border: transparent;
+		background: transparent;
+	}
 
 	* {
 		color: #dcd8d8 ;

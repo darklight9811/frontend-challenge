@@ -1,3 +1,6 @@
+// Packages
+import { CSSProperties } from "react";
+
 export default interface PropsInterface {
 	name?: string;
 
@@ -6,8 +9,9 @@ export default interface PropsInterface {
 	className?: string | string[];
 	placeholder?: string;
 	icon?: string;
+	style?: CSSProperties;
 
 	// callbacks
 	onChange?: (value: string) => string | undefined;
-	onFocus?: () => void;
+	onFocus?: (isFocused: boolean) => void;
 }
