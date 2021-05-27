@@ -1,0 +1,38 @@
+.navbar {
+	background-color: #ffffff;
+
+	position: fixed;
+	bottom: 0;
+
+	width: 100%;
+
+	padding: 10px 55px 10px;
+
+	display: flex;
+	justify-content: space-between;
+
+	a {
+		color: var(--color-gray);
+
+		display: flex;
+		flex-direction: column;
+
+		text-align: center;
+		text-decoration: none;
+
+		// text size
+		font-size: 10px;
+		line-height: 12px;
+
+		// icon size
+		& > i {
+			font-size: 17px;
+
+			margin-bottom: 10px;
+		}
+
+		&.active {
+			color: var(--color-black);
+		}
+	}
+}
