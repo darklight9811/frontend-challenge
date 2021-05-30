@@ -1,6 +1,6 @@
 // Packages
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useHistory, useLocation } from "react-router-dom";
 
 // Containers
 import useLocalization from "../../containers/Localization";
@@ -23,6 +23,20 @@ const Dashbar = (props: Props) => {
 
 	// hooks
 	const _ = useLocalization("general");
+	const location = useLocation();
+	const history = useHistory();
+
+	// -------------------------------------------------
+	// Callbacks
+	// -------------------------------------------------
+
+	const shouldRenderAlternate = React.useCallback((main: JSX.Element, alternate?: JSX.Element) => {
+		if (location.pathname.split("/").length < 3) {
+			return main;
+		}
+
+		return alternate || null;
+	}, [location]);
 
 	// -------------------------------------------------
 	// Render
@@ -32,19 +46,28 @@ const Dashbar = (props: Props) => {
 		<>
 			<div className="col">
 				<div className="px-3 pb-4 pt-5">
-					<Input style={{ zIndex: 105 }} onChange={value => void setSearch(value)} placeholder={_("SEARCH")} icon="search" />
-
+					{shouldRenderAlternate(
+						<>
+							<Input style={{ zIndex: 105 }} onChange={value => void setSearch(value)} placeholder={_("SEARCH")} icon="search" />
+							<Search search={search} />
+						</>,
+						<>
+							<button className={style.back} onClick={() => history.goBack()}><i className="fa fa-arrow-left" /></button>
+						</>
+					)}
 				</div>
-				<Search search={search} />
 
-				{props.children}
+				<div className="pb-5">
+					{props.children}
+				</div>
 			</div>
-
-			<nav className={style.navbar}>
-				<NavLink activeClassName={style.active} to="/"><i className="fa fa-home" />{_("HOME")}</NavLink>
-				<NavLink activeClassName={style.active} to="/libraries"><i className="fa fa-book" />{_("LIBRARIES")}</NavLink>
-				<NavLink activeClassName={style.active} to="/profile"><i className="fa fa-user" />{_("PROFILE")}</NavLink>
-			</nav>
+			{shouldRenderAlternate(
+				<nav className={style.navbar}>
+					<NavLink activeClassName={style.active} to="/"><i className="fa fa-home" />{_("HOME")}</NavLink>
+					<NavLink activeClassName={style.active} to="/libraries"><i className="fa fa-book" />{_("LIBRARIES")}</NavLink>
+					<NavLink activeClassName={style.active} to="/profile"><i className="fa fa-user" />{_("PROFILE")}</NavLink>
+				</nav>
+			)}
 		</>
 	);
 }

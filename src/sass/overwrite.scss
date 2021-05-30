@@ -3,9 +3,7 @@
 
 	min-height: 100vh;
 
-	> div > div {
-		padding-right: 17px;
-	}
+	overflow-x: hidden;
 }
 
 .link {
@@ -15,4 +13,8 @@
 	font-size: 14px;
 
 	float: right;
+}
+
+.slider-frame {
+	overflow: initial !important;
 }

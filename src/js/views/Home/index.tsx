@@ -45,16 +45,16 @@ const List = () => {
 				<h2 className="mt-4 mb-3">{_("READING")} <a className="link" href="#">{_("ALL")}</a></h2>
 			</div>
 
-			<Carousel withoutControls slideWidth="282px" style={{ margin: "20px" }}>
-				{bookService.getRecommended().map(i => <ReadCard userId={user.id} key={i.id} book={i} />)}
-			</Carousel>
+			<div className="my-5">
+				<ReadCard userId={user.id} book={bookService.getRecommended()[0]} />
+			</div>
 
 			<div className="container">
 				<h2 className="mt-4 mb-3">{_("REVIEWS")} <a className="link" href="#">{_("ALL")}</a></h2>
 			</div>
 
 			<Carousel withoutControls style={{ margin: "20px" }}>
-				{bookService.getPosts().map(i => <ImgCard to={i.to} img={i.img} />)}
+				{bookService.getPosts().map(i => <ImgCard key={i.to} to={i.to} img={i.img} />)}
 			</Carousel>
 		</>
 	);

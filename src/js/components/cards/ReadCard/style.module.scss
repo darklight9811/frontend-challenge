@@ -2,12 +2,10 @@
 	border-radius: 5px;
 
 	padding: 15px 20px;
-	margin-right: 10px;
 
-	width: 272px;
-	height: 140px;
+	width: 331px;
+	height: 100px;
 	
-	overflow: hidden;
 	position: relative;
 	display: flex;
 	
@@ -22,11 +20,11 @@
 	}
 
 	h1 {
-		font-size: 27px;
+		font-size: 20px;
 	}
 
 	h2 {
-		font-size: 14px;
+		font-size: 10px;
 		font-weight: lighter;
 		font-style: italic;
 	}
@@ -47,9 +45,11 @@
 }
 
 .cover {
-	width: 72px;
+	width: 91px;
 
 	border-radius: 5px;
+
+	margin-top: -34px;
 }
 
 .decoration {

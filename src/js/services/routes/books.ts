@@ -8,5 +8,6 @@ route.options({ middleware: [ "guest" ], wrap: Dashbar }, () => {
 	route("/", "Home");
 	route("/libraries", "Home");
 	route("/profile ", "Home");
+	route("/books/:id", "View");
 });
  

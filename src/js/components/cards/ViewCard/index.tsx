@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import wavyImage from "../../../../img/wave.svg";
 import triangleImage from "../../../../img/triangle.svg";
 import rectangleImage from "../../../../img/rectangle.svg";
-import circleImage from "../../../../img/circle.svg";
+import circleImage from "../../../../img/emptycircle.svg";
 
 // Containers
 import useLocalization from "../../../containers/Localization";
@@ -17,7 +17,7 @@ import style from "./style.module.scss";
 
 // Utils
 import getColor from "./utils/getColor";
-import stringToHash from "../../../utils/functions/hash";
+import spacedImgs from "../../../utils/functions/spacedImgs";
 
 const ViewCard = (props: Props) => {
 
@@ -37,15 +37,9 @@ const ViewCard = (props: Props) => {
 	}, [props.book.id]);
 
 	const position = React.useMemo(() => {
-		return [0, 1, 2, 3].map(() => {
-			const hash = stringToHash(props.book.id);
-	
-			return {
-				top: `${((Math.random() * 10000000000) / hash) * 6}%`,
-				left: `${((Math.random() * 10000000000) / hash) * 6}%`,
-				transform: `rotate(${Math.random() * 360}deg)`
-			}
-		});
+		return spacedImgs([
+			wavyImage, triangleImage, rectangleImage, circleImage
+		], 1);
 	}, []);
 
 	// -------------------------------------------------
@@ -53,7 +47,7 @@ const ViewCard = (props: Props) => {
 	// -------------------------------------------------
 
 	return (
-		<Link to={`books/${props.book.id}`} className={style.container} style={{backgroundColor: colors[0]}}>
+		<Link to={`/books/${props.book.id}`} className={`col ${style.container}`} style={{backgroundColor: colors[0]}}>
 			<div className="col-8">
 				<h1 style={{color: colors[1]}}>{props.book.volumeInfo.title}</h1>
 				<h2 style={{color: colors[1]}}>{props.book.volumeInfo.authors[0]}</h2>
@@ -70,10 +64,7 @@ const ViewCard = (props: Props) => {
 				</div>
 			}
 
-			<img className={style.decoration} src={wavyImage} style={position[0]} />
-			<img className={style.decoration} src={triangleImage} style={position[1]} />
-			<img className={style.decoration} src={rectangleImage} style={position[2]} />
-			<img className={style.decoration} src={circleImage} style={position[3]} />
+			{position}
 		</Link>
 	);
 }

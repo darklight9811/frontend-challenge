@@ -31,7 +31,7 @@ class BookServiceClass extends Service <ModelsInterface, "resource.books"> {
 	// Methods
 	// -------------------------------------------------
 
-	public index = async (query = "subject", page: number = 1, perpage = 10) => {
+	public index = async (query = "subject", page: number = 1, perpage = 12) => {
 		const [,dispatch] = this.model;
 		const [store] = this.store;
 
@@ -39,12 +39,31 @@ class BookServiceClass extends Service <ModelsInterface, "resource.books"> {
 		this.page = page;
 		this.query = query;
 
-		const response = await this.client.get(`${this.resourceUrl}`, { params: {projection: "lite", langRestrict: store.auth.language, page: this.page, maxResults: perpage, q: this.query} });
+		// prepare loading
+		dispatch.setLoading(true);
+
+		const response = await this.client.get(`${this.resourceUrl}`, { params: {projection: "lite", langRestrict: store.config.language, page: this.page, maxResults: perpage, q: this.query} });
 		
+		// dispatch actions
+		dispatch.setLoading(false);
 		dispatch.setList(response.data.items);
 		dispatch.setItems(response.data.items);
 
 		return response.data.data;
+	}
+
+	public show = async (id: string) => {
+		const [,dispatch] = this.model;
+
+		// prepare loading
+		dispatch.setLoading(true);
+		dispatch.setData(undefined);
+
+		const response = await this.client.get(`${this.resourceUrl}/${id}`, { params: {projection: "lite"} });
+
+		// dispatch actions
+		dispatch.setLoading(false);
+		dispatch.setData(response.data);
 	}
 
 	public loadPage = async () => {
@@ -59,6 +78,12 @@ class BookServiceClass extends Service <ModelsInterface, "resource.books"> {
 	// TODO Implement posts back-end
 	public getPosts () {
 		return recommendedPosts;
+	}
+
+	public clear () {
+		const [,dispatch] = this.model;
+		dispatch.clearData();
+		dispatch.setList([]);
 	}
 
 	public getReadInformation (bookId: string, userId: string) {

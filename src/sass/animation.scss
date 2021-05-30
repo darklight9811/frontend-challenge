@@ -1,0 +1,26 @@
+.spin {
+	animation: spinAnimation 1s ease infinite;
+}
+
+@keyframes spinAnimation {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+.rollin {
+	animation: rollInAnimation 1s ease;
+}
+
+@keyframes rollInAnimation {
+	from {
+		transform: translate(0, -40px);
+	}
+
+	to {
+		transform: translate(0);
+	}
+}

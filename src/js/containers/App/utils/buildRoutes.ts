@@ -13,7 +13,7 @@ export default function buildRoutes () {
 
 		// build component to render with wrap
 		let callback = wrap ?
-			() => React.createElement(wrap, { children: React.createElement(lazy(() => import(`../../../views/${route.file}/index.tsx`))) }) :
+			(p: any) => React.createElement(wrap, { children: React.createElement(lazy(() => import(`../../../views/${route.file}/index.tsx`)), p) }) :
 			lazy(() => import(`../../../views/${route.file}/index.tsx`));
 
 		return React.createElement(Route, {

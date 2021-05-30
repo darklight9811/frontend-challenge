@@ -19,6 +19,7 @@ export default function modelFactory<ResourceInterface = Record<string, unknown>
 				items: 0,
 			},
 			data: undefined as ResourceInterface | undefined,
+			loading: false,
 			...(config.state || {}),
 		},
 		
@@ -27,7 +28,7 @@ export default function modelFactory<ResourceInterface = Record<string, unknown>
 		// -------------------------------------------------
 
 		reducers: {
-			setData: (state, data: ResourceInterface) => {
+			setData: (state, data: ResourceInterface | undefined) => {
 				return {
 					...state,
 					data,
@@ -73,6 +74,12 @@ export default function modelFactory<ResourceInterface = Record<string, unknown>
 						...state.list,
 						data: list,
 					}
+				}
+			},
+			setLoading: (state, loading: boolean) => {
+				return {
+					...state,
+					loading
 				}
 			},
 			...(config.reducers || {}),

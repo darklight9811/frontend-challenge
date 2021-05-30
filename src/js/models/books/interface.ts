@@ -7,6 +7,7 @@ export default interface ModelInterface {
 	// info
 	volumeInfo: {
 		title: string;
+		subtitle?: string;
 		authors: string[];
 		publishedDate: string;
 		description?: string;
