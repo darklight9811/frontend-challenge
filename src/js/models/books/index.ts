@@ -42,7 +42,15 @@ class BookServiceClass extends Service <ModelsInterface, "resource.books"> {
 		// prepare loading
 		dispatch.setLoading(true);
 
-		const response = await this.client.get(`${this.resourceUrl}`, { params: {projection: "lite", langRestrict: store.config.language, page: this.page, maxResults: perpage, q: this.query} });
+		const response = await this.client.get(`${this.resourceUrl}`, {
+			params: {
+				projection: "lite",
+				langRestrict: store.config.language,
+				startIndex: (this.page - 1) * perpage,
+				maxResults: perpage,
+				q: this.query
+			}
+		});
 		
 		// dispatch actions
 		dispatch.setLoading(false);
@@ -67,7 +75,31 @@ class BookServiceClass extends Service <ModelsInterface, "resource.books"> {
 	}
 
 	public loadPage = async () => {
-		this.index(this.query, this.page ++);
+		const [model, dispatch] = this.model;
+		const [store] = this.store;
+
+		// update data
+		this.page++;
+
+		// prepare loading
+		dispatch.setLoading(true);
+
+		const response = await this.client.get(`${this.resourceUrl}`, {
+			params: {
+				projection: "lite",
+				langRestrict: store.config.language,
+				startIndex: (this.page - 1) * 12,
+				maxResults: 12,
+				q: this.query
+			}
+		});
+		
+		// dispatch actions
+		dispatch.setLoading(false);
+		dispatch.setList([...model.list.data, ...response.data.items]);
+		dispatch.setItems(response.data.items);
+
+		return response.data.data;
 	}
 
 	// TODO Implement a recommended back-end

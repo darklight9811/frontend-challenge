@@ -26,12 +26,16 @@ export default function spacedImgs (imgs: string[], times: number = 2, spacing: 
 			lastSpaceY += (YdirUp ? 1:-1) * (yMov);
 
 			response.push(
-				<img src={img} style={{
-					left: `${lastSpaceX}%`,
-					top: `${lastSpaceY}%`,
-					transform: `rotate(${Math.random() * 360}deg) scale(${1 + Math.random() / 2})`,
-					position: "absolute",
-				}} />
+				<img
+					key={`${lastSpaceX}/${lastSpaceY}`}
+					src={img}
+					style={{
+						left: `${lastSpaceX}%`,
+						top: `${lastSpaceY}%`,
+						transform: `rotate(${Math.random() * 360}deg) scale(${1 + Math.random() / 2})`,
+						position: "absolute",
+					}}
+				/>
 			);
 		});
 	}
