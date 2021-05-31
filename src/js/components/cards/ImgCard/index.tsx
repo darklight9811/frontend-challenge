@@ -42,9 +42,9 @@ const ImgCard = (props: Props) => {
 	// -------------------------------------------------
 
 	return (
-		<Link to={props.to} target="_BLANK" className={style.container} style={{backgroundImage: `url(${props.img})`}}>
+		<a href={props.to} target="_BLANK" className={style.container} style={{backgroundImage: `url(${props.img})`}}>
 			{position}
-		</Link>
+		</a>
 	);
 }
 
