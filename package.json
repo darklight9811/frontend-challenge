@@ -5,7 +5,8 @@
     "start": "vite --host",
     "build": "tsc && vite build",
     "serve": "vite preview",
-    "stub": "node node_modules/@acai/stubber/dist/index.js"
+    "stub": "node node_modules/@acai/stubber/dist/index.js",
+	"postinstall": "node ./src/js/utils/setupEnv/index.js"
   },
   "dependencies": {
     "@acai/router": "^2.0.4",
