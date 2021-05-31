@@ -1,5 +1,10 @@
 {
 	"HOME": "Home",
 	"LIBRARIES": "Bibliotecas",
-	"PROFILE": "Perfil"
+	"PROFILE": "Perfil",
+	"SEARCH": "Pesquisar livro",
+	"READ": "Ler agora",
+	"CHAPTER": "Capítulo",
+	"FROM": "De",
+	"BY": "De"
 }
