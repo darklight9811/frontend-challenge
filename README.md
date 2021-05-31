@@ -1,46 +1,25 @@
 # Frontend Challenge
 
-Clone this repository and start our challenge **right now**
+> Repository cloned from:
+> https://github.com/FotonTech/frontend-challenge
 
-Use React or React Native depending on the rule you are running for.
+This is a technical test provided by FotonTech for the frontend stack.
 
-**NOTE:** If you have any questions regarding the test, just send us your question on Slack's channel **#challenge-foton** on [React Brasil](https://react-brasil-slack.herokuapp.com/).
+# Info
+The aim of this test was not to only provide what was proposed, but an enviromnent that could both boost reliability, perfomance and speed of development and serve as a base for a big project that could be scaled. I developed an unique architecture that is simple yet powerful by it's design, easily able to handle a multitude of use cases and different project scopes.
 
-## API
+## Technologies
+- react
+- redux
+- vite
+- rematch (redux plugin)
+- @acai (router/stubber)
+- bootstrap, fontawesome
+- nuka-carousel, react-router, html-react-parser, faker, react-infinite-scroll-component
 
-Use the [Google Books](https://developers.google.com/books/docs/v1/using)' API to recover the data that will be shown on the app.
-
-```js
-const query = 'harry potter';
-fetch(`https://www.googleapis.com/books/v1/volumes?q=${query}`);
-```
-
-**NOTE:** You can use the form of calling apis of your choice (Fetch, Axios, etc).  
-
-## Design/Screens
-https://www.figma.com/file/KFElqzD983WNyvMY1SaF0c/book-app?node-id=0%3A1
-
-<img width="759" alt="Screen Shot 2021-04-13 at 10 42 56" src="https://user-images.githubusercontent.com/13947203/114562602-04ac2880-9c45-11eb-8f33-cc6637c475fb.png">
-
-
-The website design has 3 screens, which are:
-
-### Home
-
-1. Create a Pixel Perfect screen based on design above;
-2. The books must be clickable and redirect to **details** screen.
-
-### Search
-
-In this screen the functionalities below are **mandatory**:
-
-1. See a list of books based on search query;
-2. Make it possible to search for more books with a "Load more" button;
-3. Search books by name;
-4. Click on one of the books to see their details.
-
-### Books details
-
-In this screen the functionalities below are **mandatory**:
-
-1. See all information for the selected book.
+## Extra
+- localization
+- service schema (with classes and decorators)
+- robust route building
+- stub system for creating files
+- dynamic background generation

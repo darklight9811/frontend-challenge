@@ -6,7 +6,7 @@
     "build": "tsc && vite build",
     "serve": "vite preview",
     "stub": "node node_modules/@acai/stubber/dist/index.js",
-	"postinstall": "node ./src/js/utils/setupEnv/index.js"
+    "postinstall": "node ./src/js/utils/setupEnv/index.js"
   },
   "dependencies": {
     "@acai/router": "^2.0.4",
@@ -14,11 +14,9 @@
     "@rematch/core": "^2.0.1",
     "axios": "^0.21.1",
     "bootstrap": "^5.0.0-beta3",
-    "faker": "^5.5.3",
     "formalization": "^1.4.25",
     "html-react-parser": "^1.2.6",
     "js-cookie": "^2.2.1",
-    "luxon": "^1.27.0",
     "nuka-carousel": "^4.7.8",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
@@ -40,6 +38,7 @@
     "sass": "^1.32.13",
     "typescript": "^4.1.2",
     "vite": "^2.3.0",
+    "faker": "^5.5.3",
     "vite-plugin-pwa": "^0.7.3"
   }
 }
