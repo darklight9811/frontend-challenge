@@ -5,8 +5,6 @@ import parser from "html-react-parser";
 
 // Image
 import wavyImage from "../../../img/wave.svg";
-import triangleImage from "../../../img/triangle.svg";
-import rectangleImage from "../../../img/rectangle.svg";
 import emptycircleImage from "../../../img/emptycircle.svg";
 import circleImage from "../../../img/circle.svg";
 import circleAltImage from "../../../img/circlealt.svg";

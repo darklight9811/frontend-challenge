@@ -21,7 +21,7 @@ import './sass/index.scss';
 // Routes
 // -------------------------------------------------
 
-import "./js/services/routes/books";
+import "./js/routes/books";
 
 // -------------------------------------------------
 // Setup DOM

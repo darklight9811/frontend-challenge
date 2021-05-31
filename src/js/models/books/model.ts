@@ -1,5 +1,5 @@
 // Utils
-import modelFactory from "../../utils/modelFactory.ts";
+import modelFactory from "../../utils/modelFactory";
 
 // Interfaces
 import ModelInterface from "./interface";

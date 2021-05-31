@@ -13,7 +13,9 @@
 	justify-content: space-between;
 
 	a {
-		color: var(--color-gray);
+		&, & * {	
+			color: var(--color-gray);
+		}
 
 		display: flex;
 		flex-direction: column;
@@ -32,7 +34,7 @@
 			margin-bottom: 10px;
 		}
 
-		&.active {
+		&.active, &.active * {
 			color: var(--color-black);
 		}
 	}

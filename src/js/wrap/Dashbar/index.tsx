@@ -63,9 +63,9 @@ const Dashbar = (props: Props) => {
 			</div>
 			{shouldRenderAlternate(
 				<nav className={style.navbar}>
-					<NavLink activeClassName={style.active} to="/"><i className="fa fa-home" />{_("HOME")}</NavLink>
-					<NavLink activeClassName={style.active} to="/"><i className="fa fa-book" />{_("LIBRARIES")}</NavLink>
-					<NavLink activeClassName={style.active} to="/"><i className="fa fa-user" />{_("PROFILE")}</NavLink>
+					<NavLink exact strict activeClassName={style.active} to="/"><i className="fa fa-home" />{_("HOME")}</NavLink>
+					<NavLink exact strict activeClassName={style.active} to="/home"><i className="fa fa-book" />{_("LIBRARIES")}</NavLink>
+					<NavLink exact strict activeClassName={style.active} to="/home"><i className="fa fa-user" />{_("PROFILE")}</NavLink>
 				</nav>
 			)}
 		</>
