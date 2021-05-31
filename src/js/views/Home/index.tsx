@@ -34,7 +34,7 @@ const List = () => {
 			<div className="container">
 				<h1 className="mb-4">{_("HI")}, <span className="color-primary">{user.name}</span> 👋</h1>
 
-				<h2 className="mb-3">{_("DISCOVER")} <a className="link" href="#">{_("MORE")}</a></h2>
+				<h2 className="mb-3">{_("DISCOVER")} <button className="link">{_("MORE")}</button></h2>
 			</div>
 
 			<Carousel withoutControls slideWidth="282px" style={{ margin: "20px" }}>
@@ -42,15 +42,15 @@ const List = () => {
 			</Carousel>
 
 			<div className="container">
-				<h2 className="mt-4 mb-3">{_("READING")} <a className="link" href="#">{_("ALL")}</a></h2>
+				<h2 className="mt-4 mb-3">{_("READING")} <button className="link">{_("ALL")}</button></h2>
 			</div>
 
-			<div className="my-5">
+			<div className="my-4 py-3">
 				<ReadCard userId={user.id} book={bookService.getRecommended()[0]} />
 			</div>
 
 			<div className="container">
-				<h2 className="mt-4 mb-3">{_("REVIEWS")} <a className="link" href="#">{_("ALL")}</a></h2>
+				<h2 className="mt-4 mb-3">{_("REVIEWS")} <button className="link">{_("ALL")}</button></h2>
 			</div>
 
 			<Carousel withoutControls style={{ margin: "20px" }}>

@@ -74,6 +74,13 @@
 	}
 }
 
+.spinner {
+	font-size: 40px;
+	text-align: center;
+
+	transform: translate(0, 120px);
+}
+
 @keyframes rollin {
 	from {
 		transform: translate(-50%, -50px);

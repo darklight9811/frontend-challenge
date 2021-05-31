@@ -24,5 +24,7 @@ export default function buildRoutes () {
 		});
 	});
 
+	console.log(routes);
+
 	return routes;
 }

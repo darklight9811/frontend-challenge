@@ -48,7 +48,7 @@ const Dashbar = (props: Props) => {
 				<div className="px-3 pb-4 pt-5">
 					{shouldRenderAlternate(
 						<>
-							<Input style={{ zIndex: 105 }} onChange={value => void setSearch(value)} placeholder={_("SEARCH")} icon="search" />
+							<Input className={style.search} onChange={value => void setSearch(value)} placeholder={_("SEARCH")} icon="search" />
 							<Search search={search} />
 						</>,
 						<>
@@ -63,9 +63,9 @@ const Dashbar = (props: Props) => {
 			</div>
 			{shouldRenderAlternate(
 				<nav className={style.navbar}>
-					<NavLink exact strict activeClassName={style.active} to="/"><i className="fa fa-home" />{_("HOME")}</NavLink>
-					<NavLink exact strict activeClassName={style.active} to="/home"><i className="fa fa-book" />{_("LIBRARIES")}</NavLink>
-					<NavLink exact strict activeClassName={style.active} to="/home"><i className="fa fa-user" />{_("PROFILE")}</NavLink>
+					<button className={style.active}><i className="fa fa-home" />{_("HOME")}</button>
+					<button><i className="fa fa-book" />{_("LIBRARIES")}</button>
+					<button><i className="fa fa-user" />{_("PROFILE")}</button>
 				</nav>
 			)}
 		</>

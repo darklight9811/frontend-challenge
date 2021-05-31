@@ -35,10 +35,20 @@ const View = () => {
 	// Memos
 	// -------------------------------------------------
 
-	const render = React.useMemo(() => {
+	const render = React.useMemo(() => {		
 		if (loading || !data) {
 			return (
-				<div><i className="fa fa-spinner spin" /></div>
+				<div className={style.header}>
+					<div>
+						{spacedImgs([
+							wavyImage, emptycircleImage, circleImage, circleAltImage, emptycircleImage, circleAltImage
+						], 1)}
+					</div>
+	
+					<header>
+						<div className={style.spinner}><i className="fa fa-spinner spin" /></div>
+					</header>
+				</div>
 			);
 		}
 
